@@ -1,5 +1,12 @@
 # Build static export and publish to GitHub Pages.
-# Repo → Settings → Pages → Build and deployment → Source: GitHub Actions.
+#
+# First-time setup (required or deploy fails with HTTP 404):
+# 1. GitHub repo → Settings → Pages
+# 2. Under "Build and deployment", set Source to: GitHub Actions
+# 3. If GitHub shows suggested workflows, pick "Static HTML" or browse workflows
+#    and ensure this workflow is allowed to deploy (re-run after saving).
+#
+# Docs: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
 name: Deploy to GitHub Pages
 
@@ -27,7 +34,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
 
       - name: Compute BASE_PATH
