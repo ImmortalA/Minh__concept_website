@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Instrument_Sans, Newsreader } from "next/font/google";
 import "./globals.css";
+import "@/sites/shared/portfolio.css";
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -17,12 +18,13 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   title: "Portfolio — Concept",
   description:
-    "Dual-mode portfolio concept: economics / finance and photography / film.",
+    "Dual-view portfolio: professional profile and creative work in one scrollable page.",
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -34,7 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${instrumentSans.variable} ${newsreader.variable} antialiased`}
-        data-mode="analyst"
+        data-mode="professional"
         suppressHydrationWarning
       >
         {children}

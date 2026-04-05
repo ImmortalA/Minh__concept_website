@@ -1,5 +1,5 @@
-import { PortfolioHome } from "@/components/portfolio-home";
+import { PortfolioShell } from "@/sites/shared/portfolio-shell";
 
 export default function Home() {
-  return <PortfolioHome />;
+  return <PortfolioShell />;
 }

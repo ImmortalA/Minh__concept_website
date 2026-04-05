@@ -1,0 +1,20 @@
+/* Professional view — hero backdrop (neutral / institutional tone). */
+
+.hero--professional .hero__canvas {
+  background:
+    radial-gradient(
+      ellipse 100% 80% at 0% 20%,
+      color-mix(in srgb, var(--accent) 18%, transparent),
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse 70% 50% at 100% 100%,
+      var(--hero-accent),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 50% 120%,
+      color-mix(in srgb, var(--accent) 8%, transparent),
+      transparent 45%
+    );
+}

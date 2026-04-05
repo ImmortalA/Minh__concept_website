@@ -1,0 +1,20 @@
+/* Creative view — hero backdrop (warmer / expressive tone). */
+
+.hero--creative .hero__canvas {
+  background:
+    radial-gradient(
+      ellipse 90% 70% at 100% 0%,
+      color-mix(in srgb, var(--accent) 22%, transparent),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 60% 45% at 0% 80%,
+      var(--hero-accent),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 30% 40%,
+      color-mix(in srgb, var(--text) 4%, transparent),
+      transparent 50%
+    );
+}
